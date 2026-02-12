@@ -18,7 +18,7 @@ const MatchViewer = ({ text, matches }: MatchViewerProps) => {
         {matches && matches.length > 0 ? (
           <>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400 mb-3">
-              {matches.length} match trovati
+              {matches.length} matches found
             </p>
 
             <div className="flex flex-row items-center gap-2 flex-wrap leading-relaxed">

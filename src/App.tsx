@@ -51,7 +51,7 @@ function App() {
             </div>
             <RegexInput value={pattern} onChange={(e) => setPattern(e.target.value)} />
             <p className="text-xs text-slate-400">
-              Suggerimento: usa flag come <span className="mono">/gi</span> per più match.
+              Tip: use flags like <span className="mono">/gi</span> to capture more matches.
             </p>
           </section>
 
