@@ -3,7 +3,7 @@ type MatchViewerProps = {
   matches: string[];
 };
 
-const MatchViewer = ({ text, matches }: MatchViewerProps) => {
+const MatchViewer = ({ matches }: MatchViewerProps) => {
   const highlightClasses = [
     "bg-rose-500/30 text-rose-200 ring-1 ring-rose-400/40",
     "bg-cyan-500/25 text-cyan-200 ring-1 ring-cyan-400/40",
