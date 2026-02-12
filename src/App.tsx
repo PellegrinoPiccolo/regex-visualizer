@@ -13,9 +13,6 @@ function App() {
   React.useEffect(() => {
     if (pattern && text) {
       const foundMatches = findMatches(text, pattern);
-      console.log('=================MATCHES===================');
-      console.log(foundMatches);
-      console.log('====================================');
       setMatches(foundMatches);
     } else {
       setMatches([]);
