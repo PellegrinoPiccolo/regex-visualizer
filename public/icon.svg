@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="120" height="120" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+  
+  <!-- Left bracket -->
+  <path d="M40 32 L30 32 L30 96 L40 96" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Right bracket -->
+  <path d="M88 32 L98 32 L98 96 L88 96" fill="none" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Regex symbols -->
+  <text x="64" y="72" text-anchor="middle" font-family="monospace" font-size="28" fill="#facc15">.*</text>
+</svg>
