@@ -10,29 +10,40 @@ const MatchViewer = ({ text, matches }: MatchViewerProps) => {
     ? hightlightText(text, matches)
     : [];
 
+  const highlightClasses = [
+    "bg-rose-500/30 text-rose-200 ring-1 ring-rose-400/40",
+    "bg-cyan-500/25 text-cyan-200 ring-1 ring-cyan-400/40",
+    "bg-amber-500/25 text-amber-200 ring-1 ring-amber-400/40",
+    "bg-lime-500/20 text-lime-200 ring-1 ring-lime-400/40",
+  ];
+
   return (
-    <div className="w-full h-64 p-4 border rounded-lg">
-      <div className="w-full h-full overflow-auto whitespace-pre-wrap">
+    <div className="w-full h-64 p-4 rounded-xl border border-slate-800/80 bg-slate-950/60">
+      <div className="w-full h-full overflow-auto whitespace-pre-wrap text-sm text-slate-200/90">
         
         {matches && matches.length > 0 ? (
           <>
-            <p className="text-sm text-gray-500 mb-2">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400 mb-3">
               {matches.length} match trovati
             </p>
 
-            <div className="flex flex-row items-center gap-2 flex-wrap">
-                {parts.map((part, i) => (
+            <div className="flex flex-row items-center gap-2 flex-wrap leading-relaxed">
+              {parts.map((part, i) => (
                 <span
-                    key={i}
-                    className={part.highlight ? "bg-yellow-300" : ""}
+                  key={i}
+                  className={
+                    part.highlight
+                      ? `px-1.5 py-0.5 rounded-md ${highlightClasses[(part.variant ?? 0) % highlightClasses.length]}`
+                      : "text-slate-300/90"
+                  }
                 >
-                    {part.text}
+                  {part.text}
                 </span>
-                ))}
+              ))}
             </div>
           </>
         ) : (
-          <p className="text-gray-500">No matches found</p>
+          <p className="text-slate-500">No matches found</p>
         )}
 
       </div>

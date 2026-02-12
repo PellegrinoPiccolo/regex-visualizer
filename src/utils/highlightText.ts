@@ -1,6 +1,7 @@
 export const hightlightText = (text: string, matches: string[]) => {
-    const parts = []
+    const parts = [] as { text: string; highlight: boolean; variant?: number }[]
     let lastIndex = 0
+    let highlightIndex = 0
 
     matches.forEach(match => {
         const index = text?.indexOf(match, lastIndex)
@@ -8,7 +9,8 @@ export const hightlightText = (text: string, matches: string[]) => {
             if (index > lastIndex) {
                 parts.push({ text: text.substring(lastIndex, index), highlight: false })
             }
-            parts.push({ text: match, highlight: true })
+            parts.push({ text: match, highlight: true, variant: highlightIndex })
+            highlightIndex += 1
             lastIndex = index + match.length
         }
     })
