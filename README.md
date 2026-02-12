@@ -48,8 +48,6 @@
 * TypeScript
 * CSS / Tailwind CSS
 
-*(Optional: add Vite, Tailwind, or other tools if used.)*
-
 ---
 
 ## Getting Started
