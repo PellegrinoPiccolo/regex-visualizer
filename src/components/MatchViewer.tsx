@@ -1,15 +1,9 @@
-import { hightlightText } from "../utils/highlightText";
-
 type MatchViewerProps = {
   text: string;
   matches: string[];
 };
 
 const MatchViewer = ({ text, matches }: MatchViewerProps) => {
-  const parts = matches && matches.length > 0
-    ? hightlightText(text, matches)
-    : [];
-
   const highlightClasses = [
     "bg-rose-500/30 text-rose-200 ring-1 ring-rose-400/40",
     "bg-cyan-500/25 text-cyan-200 ring-1 ring-cyan-400/40",
@@ -28,16 +22,12 @@ const MatchViewer = ({ text, matches }: MatchViewerProps) => {
             </p>
 
             <div className="flex flex-row items-center gap-2 flex-wrap leading-relaxed">
-              {parts.map((part, i) => (
+              {matches.map((match, i) => (
                 <span
-                  key={i}
-                  className={
-                    part.highlight
-                      ? `px-1.5 py-0.5 rounded-md ${highlightClasses[(part.variant ?? 0) % highlightClasses.length]}`
-                      : "text-slate-300/90"
-                  }
+                  key={`${match}-${i}`}
+                  className={`px-1.5 py-0.5 rounded-md ${highlightClasses[i % highlightClasses.length]}`}
                 >
-                  {part.text}
+                  {match}
                 </span>
               ))}
             </div>
