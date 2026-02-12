@@ -16,9 +16,7 @@
 
 🔗 **Try it here:**
 
-```
-[link project]
-```
+**[https://regex-visualizer.pages.dev/](https://regex-visualizer.pages.dev/)**
 
 ---
 
