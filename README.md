@@ -24,11 +24,11 @@
 
 ### Main Interface
 
-<img width="1371" height="716" alt="Screenshot 2026-02-12 alle 19 46 28" src="https://github.com/user-attachments/assets/ed5cb373-e9e7-4916-8a7a-97b7a56a180c" />
+<img width="1518" height="882" alt="Screenshot 2026-02-13 alle 11 18 53" src="https://github.com/user-attachments/assets/ec715999-1cc7-47b8-8e60-8109ea61d23c" />
 
 ### Example Matches
 
-<img width="1213" height="702" alt="Screenshot 2026-02-12 alle 19 42 42" src="https://github.com/user-attachments/assets/85aba329-135d-4343-bccc-b5974bb7a4c6" />
+<img width="1399" height="947" alt="Screenshot 2026-02-13 alle 11 20 31" src="https://github.com/user-attachments/assets/ae448617-6aba-4abf-8501-f7ec0f8037ae" />
 
 ---
 
