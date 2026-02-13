@@ -1,6 +1,9 @@
 # Regex Visualizer
 
 <p align="center">
+  <img src="src/assets/logo.png" alt="Logo" width="200">
+</p>
+<p align="center">
   A simple and interactive tool to test and visualize regular expressions in real time.
 </p>
 
@@ -24,11 +27,11 @@
 
 ### Main Interface
 
-<img width="1518" height="882" alt="Screenshot 2026-02-13 alle 11 18 53" src="https://github.com/user-attachments/assets/ec715999-1cc7-47b8-8e60-8109ea61d23c" />
+<img width="1518" height="882" alt="main image" src="src/assets/main.png" />
 
 ### Example Matches
 
-<img width="1399" height="947" alt="Screenshot 2026-02-13 alle 11 20 31" src="https://github.com/user-attachments/assets/ae448617-6aba-4abf-8501-f7ec0f8037ae" />
+<img width="1399" height="947" alt="example matches image" src="src/assets/example.png" />
 
 ---
 
