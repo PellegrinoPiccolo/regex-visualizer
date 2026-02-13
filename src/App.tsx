@@ -8,16 +8,17 @@ function App() {
 
   const [pattern, setPattern] = React.useState("");
   const [text, setText] = React.useState("");
+  const [flag, setFlag] = React.useState("g");
   const [matches, setMatches] = React.useState<string[]>([]);
 
   React.useEffect(() => {
     if (pattern && text) {
-      const foundMatches = findMatches(text, pattern);
+      const foundMatches = findMatches(text, pattern, flag);
       setMatches(foundMatches);
     } else {
       setMatches([]);
     }
-  }, [pattern, text]);
+  }, [pattern, text, flag]);
 
   return (
     <div className="app-shell">
@@ -47,8 +48,28 @@ function App() {
               <h2 className="text-2xl font-semibold mt-2">Regex Pattern</h2>
             </div>
             <RegexInput value={pattern} onChange={(e) => setPattern(e.target.value)} />
-            <p className="text-xs text-slate-400">
-              Tip: use flags like <span className="mono">/gi</span> to capture more matches.
+            <div className="flex gap-2 mt-2 items-center justify-center">
+              <button
+                className={`px-3 py-1 rounded cursor-pointer ${flag === "g" ? "bg-cyan-400/80 text-slate-900" : "bg-slate-800/80 text-slate-400"} focus:ring-2 focus:ring-cyan-400/60`}
+                onClick={() => setFlag("g")}
+              >
+                g
+              </button>
+              <button
+                className={`px-3 py-1 rounded cursor-pointer ${flag === "i" ? "bg-cyan-400/80 text-slate-900" : "bg-slate-800/80 text-slate-400"} focus:ring-2 focus:ring-cyan-400/60`}
+                onClick={() => setFlag("i")}
+              >
+                i
+              </button>
+              <button
+                className={`px-3 py-1 rounded cursor-pointer ${flag === "m" ? "bg-cyan-400/80 text-slate-900" : "bg-slate-800/80 text-slate-400"} focus:ring-2 focus:ring-cyan-400/60`}
+                onClick={() => setFlag("m")}
+              >
+                m
+              </button>
+            </div>
+            <p className="text-sm text-slate-400 mt-2">
+              Tip: Use <code className="bg-slate-800/80 px-1 rounded">g</code> flag for global matches, <code className="bg-slate-800/80 px-1 rounded">i</code> for case-insensitive, and <code className="bg-slate-800/80 px-1 rounded">m</code> for multiline.
             </p>
           </section>
 
