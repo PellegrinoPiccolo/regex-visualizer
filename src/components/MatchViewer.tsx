@@ -12,7 +12,7 @@ const MatchViewer = ({ matches }: MatchViewerProps) => {
   ];
 
   return (
-    <div className="w-full h-64 p-4 rounded-xl border border-slate-800/80 bg-slate-950/60">
+    <div className="w-full h-40 md:h-48 p-4 rounded-xl border border-slate-800/80 bg-slate-950/60">
       <div className="w-full h-full overflow-auto whitespace-pre-wrap text-sm text-slate-200/90">
         
         {matches && matches.length > 0 ? (
